@@ -1,0 +1,109 @@
+/* Case-study scale follows the landing page's Manrope hierarchy and card rhythm.
+   Keep this local: shared landing styles and content are unchanged. */
+.bee-page{
+  --bee-title-size:clamp(48px,5.8vw,77px);
+  --bee-heading-size:clamp(36px,3.8vw,52px);
+  --bee-card-heading-size:clamp(30px,2.7vw,38px);
+}
+.bee-page :is(h1,h2){font-weight:700;letter-spacing:-.065em;line-height:1.06}
+.bee-page .bee-hero h1{font-size:var(--bee-title-size);line-height:1;margin-top:20px}
+.bee-page .bee-hero-heading{padding:44px 0 38px;grid-template-columns:minmax(0,1.65fr) minmax(0,1fr);gap:8%}
+.bee-page .bee-hero-summary p{font-size:15px;line-height:1.75}
+.bee-page .bee-project-mark{width:38px;height:38px;font-size:24px;margin-bottom:16px}
+.bee-page .bee-hero-summary>a{font-size:13px;margin-top:14px;padding-top:12px}
+.bee-page .bee-hero-visual{aspect-ratio:2.75;border-radius:32px}
+.bee-page .bee-photo-title{font-size:clamp(40px,4.5vw,64px);font-weight:700;line-height:1;top:12%}
+.bee-page .bee-project-meta{padding:24px 0 12px;gap:24px}
+.bee-page .bee-statement{padding:80px 0}
+.bee-page .bee-statement-grid>div{grid-template-columns:minmax(0,1.45fr) minmax(0,1fr);gap:8%}
+.bee-page .bee-statement h2{font-size:var(--bee-heading-size);max-width:690px}
+.bee-page .bee-statement .bee-body-copy{font-size:15px;line-height:1.75}
+.bee-page .bee-touchpoints{padding-bottom:72px}
+.bee-page .bee-touchpoints .bee-strategy-panel{padding:36px;gap:24px 36px;grid-template-columns:minmax(0,.85fr) minmax(0,1.4fr)}
+.bee-page .bee-touchpoints h2{font-size:var(--bee-card-heading-size);line-height:1.08}
+.bee-page .bee-preview-topline{margin-bottom:12px;font-size:11px}
+.bee-page .bee-combined-stage{height:360px;min-height:360px;padding:12px 34px 28px 0}
+.bee-page .bee-laptop-mockup{max-width:500px;margin-inline:auto}
+.bee-page .bee-combined-stage .bee-phone-mockup{width:23%;max-width:140px;bottom:12px;right:2%}
+.bee-page .bee-combined-footer{margin-top:10px}
+.bee-page .bee-touchpoints .bee-channel-grid{margin-top:0}
+.bee-page .bee-touchpoints .bee-channel{min-height:88px;padding:18px 14px;gap:8px}
+.bee-page .bee-touchpoints .bee-channel strong{font-size:17px;font-weight:700;letter-spacing:-.04em}
+.bee-page .bee-touchpoints .bee-channel-purpose{font-size:12px;margin-top:5px}
+.bee-page .bee-results{padding-bottom:72px}
+.bee-page .bee-results-heading{margin-bottom:34px}
+.bee-page .bee-results-heading h2{font-size:var(--bee-heading-size);line-height:1.06}
+.bee-page .bee-metrics{padding:26px 0}
+.bee-page .bee-metric strong{font-size:clamp(46px,4.5vw,64px);font-weight:700;line-height:1.05;margin:0 0 14px}
+.bee-page .bee-metric-label{font-size:15px;font-weight:700}
+.bee-page .bee-metric-period{font-size:12px}
+.bee-page .bee-evidence-heading{margin-top:40px;margin-bottom:20px}
+.bee-page .bee-evidence-heading h3,.bee-page .bee-evidence-card figcaption h3{font-size:18px;font-weight:700;letter-spacing:-.04em}
+.bee-page .bee-evidence-gallery{gap:28px;grid-template-columns:minmax(0,2.3fr) minmax(0,.8fr)}
+.bee-page .bee-evidence-card figcaption{padding-top:14px}
+.bee-page .bee-insight{padding:64px 0}
+.bee-page .bee-insight-grid{gap:7%;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr)}
+.bee-page .bee-insight-photo{aspect-ratio:1.5}
+.bee-page .bee-insight-copy h2{font-size:var(--bee-heading-size);line-height:1.06;margin:0 0 24px}
+.bee-page .bee-insight-copy>p:last-of-type{font-size:15px;line-height:1.75}
+.bee-page .bee-insight-copy>a{font-size:13px;margin-top:20px}
+.bee-page .bee-ending{padding-bottom:64px}
+.bee-page .bee-ending-panel{padding:40px}
+.bee-page .bee-ending-grid{gap:36px}
+.bee-page .bee-ending h2{font-size:var(--bee-heading-size);line-height:1.06}
+.bee-page .bee-ending-grid p{font-size:14px;line-height:1.75;margin-top:22px}
+.bee-page .bee-ending-arrow{width:80px;height:80px;font-size:46px}
+.bee-page .bee-ending-button{font-size:12px;gap:12px}
+@media(min-width:701px) and (max-width:1000px){
+ .bee-page{--bee-heading-size:42px;--bee-card-heading-size:30px}
+ .bee-page .bee-hero h1{font-size:60px}
+ .bee-page .bee-hero-heading{gap:6%}
+ .bee-page .bee-touchpoints .bee-strategy-panel{padding:28px;gap:24px;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr)}
+ .bee-page .bee-combined-stage{height:250px;min-height:250px;padding-right:24px}
+ .bee-page .bee-touchpoints .bee-channel{padding:16px 8px;grid-template-columns:20px 1fr}
+ .bee-page .bee-touchpoints .bee-channel strong{font-size:14px}
+ .bee-page .bee-touchpoints .bee-channel-purpose{font-size:11px}
+ .bee-page .bee-statement{padding:64px 0}
+}
+@media(max-width:700px){
+ .bee-page{--bee-title-size:43px;--bee-heading-size:34px;--bee-card-heading-size:30px}
+ .bee-page .bee-hero-heading{display:block;padding:30px 0}
+ .bee-page .bee-hero h1{font-size:var(--bee-title-size)}
+ .bee-page .bee-hero-summary{margin-top:24px;max-width:none}
+ .bee-page .bee-hero-summary p{font-size:15px}
+ .bee-page .bee-project-mark{width:32px;height:32px;margin:0;font-size:22px}
+ .bee-page .bee-hero-summary>a{margin-top:0;font-size:12px}
+ .bee-page .bee-hero-visual{aspect-ratio:1.35;border-radius:24px}
+ .bee-page .bee-photo-title{font-size:42px}
+ .bee-page .bee-project-meta{gap:22px 16px;padding:22px 0 8px}
+ .bee-page .bee-statement{padding:56px 0}
+ .bee-page .bee-statement-grid>div{display:block}
+ .bee-page .bee-statement .bee-body-copy{margin-top:22px;font-size:14px}
+ .bee-page .bee-touchpoints{padding-bottom:56px}
+ .bee-page .bee-touchpoints .bee-strategy-panel{padding:28px 24px;gap:24px}
+ .bee-page .bee-combined-stage{height:auto;min-height:350px;padding:12px 8px 20px}
+ .bee-page .bee-combined-stage .bee-phone-mockup{width:54%;max-width:180px;bottom:auto;right:auto}
+ .bee-page .bee-laptop-mockup{max-width:none}
+ .bee-page .bee-touchpoints .bee-channel{min-height:44px;padding:10px 4px}
+ .bee-page .bee-touchpoints .bee-channel strong{font-size:11px}
+ .bee-page .bee-touchpoints .bee-channel-purpose{display:none}
+ .bee-page .bee-preview-topline{font-size:11px}
+ .bee-page .bee-results{padding-bottom:56px}
+ .bee-page .bee-results-heading{margin-bottom:28px}
+ .bee-page .bee-metrics{padding:0}
+ .bee-page .bee-metric{padding:24px 0}
+ .bee-page .bee-metric strong{font-size:48px;margin-bottom:10px}
+ .bee-page .bee-metric-label{font-size:15px}
+ .bee-page .bee-evidence-gallery{grid-template-columns:1fr;gap:28px}
+ .bee-page .bee-evidence-heading{margin-top:32px}
+ .bee-page .bee-insight{padding:48px 0}
+ .bee-page .bee-insight-grid{display:flex;gap:28px}
+ .bee-page .bee-insight-photo{aspect-ratio:1.4}
+ .bee-page .bee-insight-copy>p:last-of-type{font-size:14px}
+ .bee-page .bee-ending-panel{padding:30px 24px}
+ .bee-page .bee-ending-grid{display:block}
+ .bee-page .bee-ending-grid p{font-size:13px}
+ .bee-page .bee-ending-arrow{width:60px;height:60px;font-size:36px}
+ .bee-page .bee-ending{padding-bottom:48px}
+}
+@media(max-width:700px){.bee-page .bee-insight-grid{flex-direction:column;align-items:stretch}.bee-page .bee-ending-button{flex-direction:row;max-width:none;text-align:left;margin-top:26px}}

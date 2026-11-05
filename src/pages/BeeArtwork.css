@@ -1,0 +1,14 @@
+.bee-page .bee-combined-stage .bee-artwork-laptop{display:block;width:calc(100% - 26px);max-width:540px;height:310px;padding:0;margin:0;border:0;border-radius:0;background:none;position:relative;cursor:zoom-in;filter:drop-shadow(0 12px 12px #171a3724)}
+.bee-page .bee-combined-stage .bee-artwork-phone{display:block;position:absolute;right:0;bottom:12px;width:160px;height:300px;padding:0;margin:0;border:0;border-radius:0;background:none;box-shadow:none;cursor:zoom-in;filter:drop-shadow(0 10px 10px #171a372b)}
+.bee-page .supplied-artwork{display:block;width:100%;height:100%;overflow:visible}
+.bee-expanded-artwork{margin:22px auto 0}
+.bee-expanded-artwork-desktop{width:100%;height:min(62vh,640px)}
+.bee-expanded-artwork-mobile{width:min(100%,360px);height:min(65vh,740px)}
+@media(min-width:701px) and (max-width:1000px){.bee-page .bee-combined-stage .bee-artwork-laptop{height:220px;width:calc(100% - 15px)}.bee-page .bee-combined-stage .bee-artwork-phone{width:105px;height:200px;bottom:8px;right:-7px}}
+@media(max-width:700px){
+.bee-page .bee-combined-stage .bee-artwork-laptop{width:100%;max-width:540px;height:240px;margin:auto}
+.bee-page .bee-combined-stage .bee-artwork-phone{position:relative;right:auto;bottom:auto;width:170px;height:330px;margin:auto}
+.bee-page .bee-device-mobile .bee-artwork-laptop{display:none}
+.bee-page .bee-device-desktop .bee-artwork-phone{display:none}
+.bee-page .bee-expanded-artwork-desktop{height:45vh}.bee-page .bee-expanded-artwork-mobile{height:65vh}
+}
