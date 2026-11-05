@@ -20,6 +20,9 @@ assert(config.outputDirectory === 'dist')
 assert(config.rewrites[0].destination === '/bee-honey-spa.html')
 const lock = JSON.parse(await readFile('package-lock.json', 'utf8'))
 assert(lock.packages['node_modules/@rolldown/binding-linux-x64-gnu'], 'Linux build dependency missing from lockfile')
+for (const name of ['@emnapi/core', '@emnapi/runtime', '@emnapi/wasi-threads', 'tslib']) {
+  assert(lock.packages[`node_modules/@tailwindcss/oxide-wasm32-wasi/node_modules/${name}`], `Bundled Tailwind dependency missing from lockfile: ${name}`)
+}
 const artworkSource = await readFile('src/artworkAssets.ts', 'utf8')
 const artworkUrls = [...artworkSource.matchAll(/"(?:src|preview)": "([^"]+)"/g)].map(match => match[1])
 assert(artworkUrls.length === 24, 'Expected eight device artworks and four logos with previews')

@@ -25,3 +25,7 @@ Contact form is a frontend demo and does not send leads. Footer has pending cont
 - Strict TypeScript, production build and asset checks passed after the update. Asset check includes all 24 artwork/preview files.
 - Desktop Maps artwork was visually verified on the blue panel at 1440px with no horizontal overflow. Full post-update mobile/browser verification was not completed: local browser use was disabled in Work settings.
 - Previous verification above applies to the earlier release; previous asset byte totals exclude the new supplied artwork.
+
+## Vercel install fix
+
+The first Vercel deployment stopped at npm ci because bundled Tailwind WASI dependency records were incomplete. Repaired the lockfile using npm 11.21.2 without changing resolved application/library versions. Clean npm ci and production build passed on Node 24.13.0 / npm 11.6.2; npm 11.21.2 clean install also passed. Linux x64/glibc npm ci dry-run passed (not an actual Linux build). Added asset-check assertions for all four bundled dependency records.
