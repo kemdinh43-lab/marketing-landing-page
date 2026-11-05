@@ -29,3 +29,7 @@ Contact form is a frontend demo and does not send leads. Footer has pending cont
 ## Vercel install fix
 
 The first Vercel deployment stopped at npm ci because bundled Tailwind WASI dependency records were incomplete. Repaired the lockfile using npm 11.21.2 without changing resolved application/library versions. Clean npm ci and production build passed on Node 24.13.0 / npm 11.6.2; npm 11.21.2 clean install also passed. Linux x64/glibc npm ci dry-run passed (not an actual Linux build). Added asset-check assertions for all four bundled dependency records.
+
+## Statistics cutouts
+
+Replaced the evidence gallery with the two supplied transparent PNG files, unchanged. SVG viewBox excludes transparent margins: Google 541×268 visible pixels, Instagram 211×415. Gallery display is capped at these native dimensions, preserves aspect ratios, and stacks on mobile. Updated enlarged views to use the same assets. TypeScript, production build and asset checks passed. No new browser visual check was performed.
