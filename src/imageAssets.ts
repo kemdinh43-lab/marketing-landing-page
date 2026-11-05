@@ -73,5 +73,10 @@ export const imageAssets: Record<string, {width: number; height: number; srcSet:
     "width": 1520,
     "height": 727,
     "srcSet": "/images/bee-case/evidence/google-performance-640.webp 640w, /images/bee-case/evidence/google-performance-1280.webp 1280w, /images/bee-case/evidence/google-performance.webp 1520w"
+  },
+  "/images/bee-case/bee-honey-storefront.webp": {
+    "width": 829,
+    "height": 1020,
+    "srcSet": "/images/bee-case/bee-honey-storefront-480.webp 480w, /images/bee-case/bee-honey-storefront.webp 829w"
   }
 }

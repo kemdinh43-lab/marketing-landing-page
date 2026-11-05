@@ -107,3 +107,7 @@
  .bee-page .bee-ending{padding-bottom:48px}
 }
 @media(max-width:700px){.bee-page .bee-insight-grid{flex-direction:column;align-items:stretch}.bee-page .bee-ending-button{flex-direction:row;max-width:none;text-align:left;margin-top:26px}}
+
+/* Keep the existing hero frame; position the real storefront sign inside it. */
+.bee-page .bee-hero-visual--storefront>img{object-position:50% 30%}
+.bee-page .bee-hero-visual--storefront:after{display:none}
