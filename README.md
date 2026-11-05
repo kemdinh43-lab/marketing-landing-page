@@ -57,7 +57,7 @@ Dùng trực tiếp artwork MacBook/iPhone Website, Instagram, Google Maps và K
 - `src/pages/BeeScale.css`: thang chữ, kích thước khối thống nhất với landing.
 - `src/pages/BeeResults.tsx`: metrics đếm tăng và gallery thống kê.
 - `src/artworkAssets.ts`, `src/ArtworkImage.tsx`: tám mockup do bạn cung cấp, chuẩn hóa tỷ lệ và cắt phần nền ngoài thiết bị khi hiển thị.
-- `src/LogoMarquee.tsx`: dải bốn logo cuộn, nền trắng, có tạm dừng và hỗ trợ reduced motion.
+- `src/LogoMarquee.tsx`: dải bốn logo cuộn, nền trắng, tạm dừng khi hover/focus và hỗ trợ reduced motion.
 - `src/imageAssets.ts`: kích thước và srcset các ảnh tối ưu.
 - `public/images`, `public/fonts`: tài nguyên chạy độc lập trong dự án.
 - `docs`: nguồn ảnh và biên bản kiểm tra bản bàn giao.
