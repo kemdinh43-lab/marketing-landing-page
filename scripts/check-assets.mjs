@@ -7,7 +7,6 @@ for (const [url, image] of Object.entries(assets)) {
   for (const candidate of image.srcSet.split(', ')) await access(`public${candidate.split(' ')[0]}`)
 }
 for (const file of ['public/fonts/manrope-latin.woff2', 'public/fonts/manrope-vietnamese.woff2', 'public/favicon.svg', 'public/robots.txt']) await access(file)
-for (const file of ['google-performance-cutout.png', 'instagram-insights-cutout.png']) await access(`public/images/bee-case/evidence/${file}`)
 const home = await readFile('dist/index.html', 'utf8')
 const page = await readFile('dist/bee-honey-spa.html', 'utf8')
 assert(home.includes('lang="vi"'))

@@ -30,15 +30,3 @@
 }
 
 .bee-results-heading h2{margin-top:0}.bee-metric strong{margin-top:0}
-
-/* Preserve the supplied cutouts at their visible proportions and native scale. */
-.bee-page .bee-evidence-gallery{max-width:860px;margin-inline:auto;grid-template-columns:minmax(0,541px) minmax(0,211px);gap:54px;align-items:center;justify-content:space-between}
-.bee-page .bee-evidence-card>button{border-radius:0;background:none;box-shadow:none}
-.bee-page .bee-evidence-card .supplied-artwork{display:block;width:100%;height:auto;overflow:visible}
-.bee-evidence-card-0 .supplied-artwork,.bee-evidence-expanded-0 .supplied-artwork{aspect-ratio:541/268}
-.bee-evidence-card-1 .supplied-artwork,.bee-evidence-expanded-1 .supplied-artwork{aspect-ratio:211/415}
-.bee-evidence-expanded{margin:0 auto}
-.bee-evidence-expanded-0{width:100%;max-width:541px}
-.bee-evidence-expanded-1{width:100%;max-width:211px}
-.bee-evidence-expanded .supplied-artwork{display:block;width:100%;height:auto}
-@media(max-width:700px){.bee-page .bee-evidence-gallery{grid-template-columns:1fr;gap:32px}.bee-page .bee-evidence-card-0{width:100%;max-width:541px;margin-inline:auto}.bee-page .bee-evidence-card-1{width:200px;max-width:100%;margin-inline:auto}}

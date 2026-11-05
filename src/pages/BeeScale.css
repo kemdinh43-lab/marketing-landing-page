@@ -39,7 +39,7 @@
 .bee-page .bee-metric-period{font-size:12px}
 .bee-page .bee-evidence-heading{margin-top:40px;margin-bottom:20px}
 .bee-page .bee-evidence-heading h3,.bee-page .bee-evidence-card figcaption h3{font-size:18px;font-weight:700;letter-spacing:-.04em}
-
+.bee-page .bee-evidence-gallery{gap:28px;grid-template-columns:minmax(0,2.3fr) minmax(0,.8fr)}
 .bee-page .bee-evidence-card figcaption{padding-top:14px}
 .bee-page .bee-insight{padding:64px 0}
 .bee-page .bee-insight-grid{gap:7%;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr)}

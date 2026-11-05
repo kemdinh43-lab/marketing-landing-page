@@ -1,4 +1,4 @@
-import SuppliedArtwork from '../ArtworkImage'
+import ResponsiveImage from '../ResponsiveImage'
 import { useEffect, useRef, useState } from 'react'
 import './BeeResults.css'
 
@@ -9,8 +9,8 @@ const metrics = [
   { value: 727, label: 'Người xem Instagram', source: 'Instagram Insights', period: '90 ngày · 05/08 – 03/11 theo ảnh' },
 ]
 const evidence = [
-  { src: '/images/bee-case/evidence/google-performance-cutout.png', viewBox: '18 93 541 268', title: 'Hiện diện trên Google', platform: 'GOOGLE BUSINESS PROFILE', detail: 'Tổng quan hồ sơ và các cụm từ tìm kiếm · tháng 6 – tháng 11/2026', width: 577, height: 433 },
-  { src: '/images/bee-case/evidence/instagram-insights-cutout.png', viewBox: '182 9 211 415', title: 'Nội dung trên Instagram', platform: 'INSTAGRAM INSIGHTS', detail: 'Lượt xem, người xem và loại nội dung · 90 ngày theo ảnh', width: 577, height: 433 },
+  { src: '/images/bee-case/evidence/google-performance.webp', title: 'Hiện diện trên Google', platform: 'GOOGLE BUSINESS PROFILE', detail: 'Tổng quan hồ sơ và các cụm từ tìm kiếm · tháng 6 – tháng 11/2026', width: 1520, height: 727 },
+  { src: '/images/bee-case/evidence/instagram-insights.webp', title: 'Nội dung trên Instagram', platform: 'INSTAGRAM INSIGHTS', detail: 'Lượt xem, người xem và loại nội dung · 90 ngày theo ảnh', width: 869, height: 1885 },
 ]
 const format = (value: number) => new Intl.NumberFormat('vi-VN').format(value)
 
@@ -62,13 +62,13 @@ export default function BeeResults() {
       <div className="bee-evidence-heading"><h3>Phía sau những con số</h3></div>
       <div className="bee-evidence-gallery">
         {evidence.map((item, index) => <figure className={`bee-evidence-card bee-evidence-card-${index}`} key={item.src}>
-          <button type="button" onClick={() => setSelected(index)} aria-label={`Phóng lớn thống kê ${item.platform}`}><SuppliedArtwork artwork={{...item, preview: item.src}} label={`Ảnh thống kê ${item.platform} do khách hàng cung cấp`}/></button>
+          <button type="button" onClick={() => setSelected(index)} aria-label={`Phóng lớn thống kê ${item.platform}`}><ResponsiveImage sizes={index === 0 ? '(max-width: 650px) 100vw, 900px' : '340px'} src={item.src} alt={`Ảnh thống kê ${item.platform} do khách hàng cung cấp`} width={item.width} height={item.height} loading="lazy" decoding="async"/></button>
           <figcaption><h3>{item.title}</h3></figcaption>
         </figure>)}
       </div>
     </div>
     <dialog ref={dialog} className="bee-lightbox bee-evidence-lightbox" aria-labelledby="bee-evidence-dialog-title" onClose={() => setSelected(null)} onClick={event => { if (event.target === dialog.current) dialog.current?.close() }}>
-      {selected !== null && <div className="bee-lightbox-content"><header><h3 id="bee-evidence-dialog-title">{evidence[selected].title}</h3><button type="button" autoFocus aria-label="Đóng ảnh thống kê" onClick={() => dialog.current?.close()}>Đóng ×</button></header><p>{evidence[selected].detail}</p><div className={`bee-evidence-expanded bee-evidence-expanded-${selected}`}><SuppliedArtwork artwork={{...evidence[selected], preview: evidence[selected].src}} label={`Ảnh thống kê đầy đủ ${evidence[selected].platform}`}/></div></div>}
+      {selected !== null && <div className="bee-lightbox-content"><header><h3 id="bee-evidence-dialog-title">{evidence[selected].title}</h3><button type="button" autoFocus aria-label="Đóng ảnh thống kê" onClick={() => dialog.current?.close()}>Đóng ×</button></header><p>{evidence[selected].detail}</p><ResponsiveImage sizes="900px" src={evidence[selected].src} alt={`Ảnh thống kê đầy đủ ${evidence[selected].platform}`} width={evidence[selected].width} height={evidence[selected].height}/></div>}
     </dialog>
   </section>
 }
