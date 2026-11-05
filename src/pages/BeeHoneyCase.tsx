@@ -9,7 +9,7 @@ import './BeeScale.css'
 
 // Illustrative photography and user-supplied complete device mockups.
 const spaPhotos = {
-  hero: '/images/bee-case/bee-honey-storefront.webp',
+  hero: '/images/bee-case/unsplash-spa-treatment.webp',
   treatment: '/images/bee-case/unsplash-spa-room.webp',
 }
 
@@ -100,8 +100,10 @@ export default function BeeHoneyCase() {
           <div><p className="bee-eyebrow">BEE HONEY SPA · ĐÀ NẴNG</p><h1 id="bee-title">Một điểm đến.<br/><span>Nhiều kết nối.</span></h1></div>
           <div className="bee-hero-summary"><span className="bee-project-mark" aria-hidden="true">↗</span><p>Từ một địa điểm spa đến hệ sinh thái hiện diện và đặt dịch vụ trực tuyến.</p><a href="#bee-showcase">Khám phá dự án <span aria-hidden="true">↓</span></a></div>
         </div>
-        <figure className="bee-hero-visual bee-hero-visual--storefront">
-          <ResponsiveImage sizes="(max-width: 820px) 100vw, 1200px" src={spaPhotos.hero} alt="Mặt tiền Bee Honey Spa với bảng tên trên nền gỗ và đèn lồng" width="829" height="1020" fetchPriority="high"/>
+        <figure className="bee-hero-visual">
+          <ResponsiveImage sizes="(max-width: 820px) 100vw, 1200px" src={spaPhotos.hero} alt="Không gian spa ấm áp, ảnh minh họa từ Unsplash" width="1200" height="800" fetchPriority="high"/>
+          <div className="bee-photo-title" aria-hidden="true">Bee Honey<br/><span>Spa.</span></div>
+          <figcaption>Ảnh minh họa / Unsplash</figcaption>
         </figure>
         <div className="bee-project-meta"><div><span>LĨNH VỰC</span><strong>Spa & wellness</strong></div><div><span>ĐỊA ĐIỂM</span><strong>Đà Nẵng, Việt Nam</strong></div><div><span>CÁC ĐIỂM CHẠM</span><p>Website · Google Maps<br/>Instagram · Klook</p></div><a href="https://beehoneyspa.com/" target="_blank" rel="noopener noreferrer">Ghé thăm website <span aria-hidden="true">↗</span></a></div>
       </div>
